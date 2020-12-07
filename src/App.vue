@@ -1,28 +1,23 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
-</template>
+    <div id="app">
+        <div class="jumbotron">
+            <h1 class="display-4">Escombros da Guerra</h1>
+            <hr class="my-4">
+            <p class="lead"> É o fim da era da magia no continente de Garguha. Há mil anos haviam centenas de criaturas e raças diferentes que convivam em constantes tensões por território e poder, enquanto monstros escalavam os mais altos muros fortificados dos castelos. Mas isso foi em um outro tempo. </p>
+        </div>
 
+        <div class="container">
+            <router-link to="/" class="btn btn-dark mr-2">Home</router-link>
+            <router-link :to="{path: '/spells'}" class="btn btn-dark">Magias</router-link>            
+            <router-view></router-view>            
+        </div>
+    </div>
+</template>
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
+  
 }
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
